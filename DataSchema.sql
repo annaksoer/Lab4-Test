@@ -8,10 +8,10 @@ DROP TABLE IF EXISTS DOCTORS;
 DROP TABLE IF EXISTS USERS;
 
 -- Створення таблиці Користувачів
-CREATE TABLE USERS (
-    ID SERIAL PRIMARY KEY,
-    USER_NAME VARCHAR(255) NOT NULL,
-    PHYSICAL_STATE VARCHAR(255)
+create table users (
+    id SERIAL PRIMARY KEY,
+    user_name VARCHAR(255) NOT NULL,
+    physical_state VARCHAR(255)
 );
 
 -- Створення таблиці Лікарів
