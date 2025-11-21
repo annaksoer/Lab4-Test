@@ -1,0 +1,16 @@
+name: JavaScript Code Linter
+on:
+  push:
+    branches: [ main, master ]
+jobs:
+  JavaScriptCodeLinter:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Install Biome
+        run: npm install --save-dev --save-exact @biomejs/biome
+
+      - name: Run Biome Check
+        run: npx @biomejs/biome check *.js
